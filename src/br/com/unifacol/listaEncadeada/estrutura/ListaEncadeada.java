@@ -1,6 +1,12 @@
+package br.com.unifacol.listaEncadeada.estrutura;
+
 public class ListaEncadeada<T> {
     private No<T> inicio;
     private Integer tamanho = 0;
+
+    public No<T> getInicio() {
+        return inicio;
+    }
 
     //Adcionar no final da lista
     public void adicionar(T elemento) {
@@ -35,8 +41,6 @@ public class ListaEncadeada<T> {
             return atual;
         }
     }
-
-
 
     //listar
     public String listar(){

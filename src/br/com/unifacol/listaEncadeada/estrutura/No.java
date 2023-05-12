@@ -1,3 +1,5 @@
+package br.com.unifacol.listaEncadeada.estrutura;
+
 public class No<T> {
    private T elemento;
    private No<T> proximo;
@@ -31,6 +33,6 @@ public class No<T> {
 
    @Override
    public String toString() {
-      return "\nElemento: " + this.elemento + "\nProximo -> " + this.getProximo();
+      return "\nElemento: " + this.elemento + "\nProximo ->  " + this.getProximo();
    }
 }
