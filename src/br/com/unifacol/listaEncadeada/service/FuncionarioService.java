@@ -39,11 +39,11 @@ public class FuncionarioService {
     }
 
     public void listar() {
-        funcionarioRepository.listarFuncionario();
+        System.out.println(funcionarioRepository.listarFuncionario());
     }
 
     public void listarPorCPF() {
         String cpfAtual = JOptionPane.showInputDialog("CPF atual: ");
-        funcionarioRepository.buscarFuncionario(cpfAtual);
+        System.out.println(funcionarioRepository.buscarFuncionario(cpfAtual));
     }
 }

@@ -17,7 +17,6 @@ public class ClienteService {
 
         Cliente cliente = new Cliente(nome, cpf, idade, email, senha);
         clienteRepository.cadastrarCliente(cliente);
-        System.out.println(clienteRepository.listarClientes());
     }
 
     public void alterar() {
@@ -39,11 +38,11 @@ public class ClienteService {
     }
 
     public void listar() {
-        clienteRepository.listarClientes();
+        System.out.println(clienteRepository.listarClientes());
     }
 
     public void listarPorCPF() {
         String cpfAtual = JOptionPane.showInputDialog("CPF atual: ");
-        clienteRepository.buscarCliente(cpfAtual);
+        System.out.println(clienteRepository.buscarCliente(cpfAtual));
     }
 }

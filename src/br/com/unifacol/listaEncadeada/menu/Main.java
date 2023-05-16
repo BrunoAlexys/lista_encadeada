@@ -14,17 +14,7 @@ public class Main {
 
     public static void menu() {
         Integer menu =
-                Integer.parseInt(JOptionPane.showInputDialog("\n------- Gerenciador -------" +
-                        "\n|Opção 1 - Cadastrar Funcionario |" +
-                        "\n|Opção 2 - Alterar Funcionario |" +
-                        "\n|Opção 3 - Excluir Funcionario |" +
-                        "\n|Opção 4 - Listar Funcionario |" +
-                        "\n|Opção 5 - Cadastrar Cliente |" +
-                        "\n|Opção 6 - Alterar Cliente |" +
-                        "\n|Opção 7 - Excluir Cliente |" +
-                        "\n|Opção 8 - Listar Cliente |" +
-                        "\n|Opção 9 - Listar por CPF |" +
-                        "\n Opção 0 - Sair "));
+                Integer.parseInt(JOptionPane.showInputDialog(new StringBuilder().append("\n------- Gerenciador -------").append("\n|Opção 1 - Cadastrar Funcionario |").append("\n|Opção 2 - Alterar Funcionario |").append("\n|Opção 3 - Excluir Funcionario |").append("\n|Opção 4 - Listar Funcionario |").append("\nOpção 5 - listar funcionario por CPF").append("\n|Opção 6 - Cadastrar Cliente |").append("\n|Opção 7 - Alterar Cliente |").append("\n|Opção 8 - Excluir Cliente |").append("\n|Opção 9 - Listar Cliente |").append("\n|Opção 10 - Listar cliente por CPF |").append("\n Opção 0 - Sair ").toString()));
 
         switch (menu){
             case 1:
@@ -40,22 +30,26 @@ public class Main {
                 funcionarioService.listar();
                 menu();
             case 5:
-                clienteService.cadastrar();
+                funcionarioService.listarPorCPF();
                 menu();
             case 6:
-                clienteService.alterar();
+                clienteService.cadastrar();
                 menu();
             case 7:
-                clienteService.excluir();
+                clienteService.alterar();
                 menu();
             case 8:
-                clienteService.listar();
+                clienteService.excluir();
                 menu();
             case 9:
-                clienteService.listarPorCPF();
+                clienteService.listar();
                 menu();
             case 10:
+                clienteService.listarPorCPF();
+                menu();
+            case 11:
                 System.exit(0);
+                JOptionPane.showMessageDialog(null,"Volte sempre!");
         }
     }
 }
